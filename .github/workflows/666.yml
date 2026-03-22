@@ -13,24 +13,25 @@ jobs:
       contents: write # 需要写入权限来推送代码
     steps:
       - name: 检出仓库
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.3.0
 
       - name: 下载并处理IP列表
         run: |
           # 下载源文件
-          curl -o china.txt https://china-operator-ip.yfgao.com/china.txt
+          curl -o china.txt https://china-operator-ip.yfgao.com/china46.txt
           
           # 处理文件: 每行前加 @@
           awk '{print "@@" $0}' china.txt > temp.txt
           
-          # 在最后一行添加指定内容
+          # 在最后添加指定内容
           echo "/^\\d*\\.\\d*\\.\\d*\\.\\d*$/" >> temp.txt
+          echo "/\\:{2,}/" >> temp.txt
           
           # 将结果保存为666.txt
           mv temp.txt 666.txt
           
           # 清理下载的源文件
-          rm china.txt
+          rm china46.txt
           
           # 显示处理完成的消息（可选，用于日志）
           echo "处理完成，最终内容预览："
