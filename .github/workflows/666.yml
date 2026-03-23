@@ -2,8 +2,8 @@ name: 666
 
 on:
   schedule:
-    # 北京时间13点
-    - cron: '0 5 * * *'
+    # 北京时间10时46分
+    - cron: '46 2 * * *'
   workflow_dispatch: # 允许手动触发工作流，方便测试
 
 jobs:
@@ -26,6 +26,7 @@ jobs:
           # 在最后添加指定内容
           echo "/^\\d*\\.\\d*\\.\\d*\\.\\d*$/" >> temp.txt
           echo "/\\:{2,}/" >> temp.txt
+          echo "@@||cdn.jsdelivr.net^" >> temp.txt
           
           # 将结果保存为666.txt
           mv temp.txt 666.txt
