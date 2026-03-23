@@ -13,7 +13,7 @@ jobs:
       contents: write # 需要写入权限来推送代码
     steps:
       - name: 检出仓库
-        uses: actions/checkout@v4.3.0
+        uses: actions/checkout@v6.0.2
 
       - name: 下载并处理IP列表
         run: |
