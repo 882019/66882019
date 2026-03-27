@@ -6068,3 +6068,15 @@
 /^\d*\.\d*\.\d*\.\d*$/
 /\:{2,}/
 @@||cdn.jsdelivr.net^
+@@||purge.jsdelivr.net^
+@@||pool.ntp.org^
+@@||dns.google^
+@@||google.com^
+@@||jxguo.com^
+@@||adguard.com^
+@@||adguard.org^
+@@||adguard-dns.io^
+@@||adguard.info^
+@@||adtidy.org^
+@@||outlook.com^
+@@||googleapis.com^
