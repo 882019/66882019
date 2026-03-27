@@ -26,6 +26,7 @@ jobs:
           # 在最后添加指定内容
           echo "/^\\d*\\.\\d*\\.\\d*\\.\\d*$/" >> temp.txt
           echo "/\\:{2,}/" >> temp.txt
+          echo "@@||time.windows.com^" >> temp.txt
           echo "@@||cdn.jsdelivr.net^" >> temp.txt
           echo "@@||purge.jsdelivr.net^" >> temp.txt
           echo "@@||pool.ntp.org^" >> temp.txt
@@ -39,6 +40,35 @@ jobs:
           echo "@@||adtidy.org^" >> temp.txt
           echo "@@||outlook.com^" >> temp.txt
           echo "@@||googleapis.com^" >> temp.txt
+          echo "@@224.0.0.0/3" >> temp.txt
+          echo "@@203.0.113.0/24" >> temp.txt
+          echo "@@198.51.100.0/24" >> temp.txt
+          echo "@@198.18.0.0/15" >> temp.txt
+          echo "@@192.175.48.0/24" >> temp.txt
+          echo "@@192.168.0.0/16" >> temp.txt
+          echo "@@192.88.99.0/24" >> temp.txt
+          echo "@@192.52.193.0/24" >> temp.txt
+          echo "@@192.31.196.0/24" >> temp.txt
+          echo "@@192.0.2.0/24" >> temp.txt
+          echo "@@192.0.0.0/24" >> temp.txt
+          echo "@@172.16.0.0/12" >> temp.txt
+          echo "@@169.254.0.0/16" >> temp.txt
+          echo "@@127.0.0.0/8" >> temp.txt
+          echo "@@100.64.0.0/10" >> temp.txt
+          echo "@@10.0.0.0/8" >> temp.txt
+          echo "@@0.0.0.0/8" >> temp.txt
+          echo "@@ff00::/8" >> temp.txt
+          echo "@@fe80::/10" >> temp.txt
+          echo "@@fc00::/7" >> temp.txt
+          echo "@@2620:4f:8000::/48" >> temp.txt
+          echo "@@2002::/16" >> temp.txt
+          echo "@@2001:db8::/32" >> temp.txt
+          echo "@@2001::/23" >> temp.txt
+          echo "@@100::/64" >> temp.txt
+          echo "@@64:ff9b:1::/48" >> temp.txt
+          echo "@@64:ff9b::/96" >> temp.txt
+          echo "@@::ffff:0:0/96" >> temp.txt
+          echo "@@::/127" >> temp.txt
           
           # 将结果保存为666.txt
           mv temp.txt 666.txt
