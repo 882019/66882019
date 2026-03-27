@@ -2,8 +2,8 @@ name: 666
 
 on:
   schedule:
-    # 北京时间10时46分
-    - cron: '46 2 * * *'
+    # 北京时间10时44分
+    - cron: '44 2 * * *'
   workflow_dispatch: # 允许手动触发工作流，方便测试
 
 jobs:
@@ -27,6 +27,18 @@ jobs:
           echo "/^\\d*\\.\\d*\\.\\d*\\.\\d*$/" >> temp.txt
           echo "/\\:{2,}/" >> temp.txt
           echo "@@||cdn.jsdelivr.net^" >> temp.txt
+          echo "@@||purge.jsdelivr.net^" >> temp.txt
+          echo "@@||pool.ntp.org^" >> temp.txt
+          echo "@@||dns.google^" >> temp.txt
+          echo "@@||google.com^" >> temp.txt
+          echo "@@||jxguo.com^" >> temp.txt
+          echo "@@||adguard.com^" >> temp.txt
+          echo "@@||adguard.org^" >> temp.txt
+          echo "@@||adguard-dns.io^" >> temp.txt
+          echo "@@||adguard.info^" >> temp.txt
+          echo "@@||adtidy.org^" >> temp.txt
+          echo "@@||outlook.com^" >> temp.txt
+          echo "@@||googleapis.com^" >> temp.txt
           
           # 将结果保存为666.txt
           mv temp.txt 666.txt
