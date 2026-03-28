@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Access URL
         run: |
-          curl -I https://purge.jsdelivr.net/gh/nihao/66662020/555.txt
+          curl -I https://purge.jsdelivr.net/gh/882019/66882019/666.txt
