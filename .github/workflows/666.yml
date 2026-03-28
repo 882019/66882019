@@ -18,7 +18,7 @@ jobs:
       - name: 下载并处理IP列表
         run: |
           # 下载源文件
-          curl -o china46.txt https://china-operator-ip.yfgao.com/china46.txt
+          curl -o china46.txt https://gaoyifan.github.io/china-operator-ip/china46.txt
           
           # 处理文件: 每行前加 @@
           awk '{print "@@" $0}' china46.txt > temp.txt
