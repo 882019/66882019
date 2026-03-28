@@ -1,1 +1,15 @@
+name: refresh
 
+on:
+  schedule:
+    # 北京时间 10:53
+    - cron: '53 2 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  access-url:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Access URL
+        run: |
+          curl -I https://purge.jsdelivr.net/gh/nihao/66662020/555.txt
