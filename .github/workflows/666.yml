@@ -2,8 +2,8 @@ name: 666
 
 on:
   schedule:
-    # 北京时间10时44分
-    - cron: '44 2 * * *'
+    # 北京时间10时50分
+    - cron: '50 2 * * *'
   workflow_dispatch: # 允许手动触发工作流，方便测试
 
 jobs:
