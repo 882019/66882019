@@ -10,6 +10,7 @@ jobs:
   access-url:
     runs-on: ubuntu-latest
     steps:
-      - name: Access URL
+      - name: purge jsdelivr cache
         run: |
-          curl -I https://purge.jsdelivr.net/gh/882019/66882019/666.txt
+          curl -X GET "https://purge.jsdelivr.net/gh/882019/66882019/666.txt"
+          echo "Purge request sent"
